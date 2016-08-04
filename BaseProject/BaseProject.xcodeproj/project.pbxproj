@@ -88,6 +88,7 @@
 		847F8EEB1D530F0A0039291C /* FiveBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847F8EE91D530F0A0039291C /* FiveBaseViewController.xib */; };
 		847F8EEE1D53218B0039291C /* ALSettingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 847F8EED1D53218B0039291C /* ALSettingTools.m */; };
 		847F8EF51D532A7D0039291C /* ALCustomBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 847F8EF41D532A7D0039291C /* ALCustomBarButtonItem.m */; };
+		847F8EFF1D5350660039291C /* UIViewController+ALAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 847F8EFE1D5350660039291C /* UIViewController+ALAction.m */; };
 		84E9B3561D507500004264BF /* BaseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E9B3551D507500004264BF /* BaseProjectTests.m */; };
 		84E9B3611D507501004264BF /* BaseProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E9B3601D507501004264BF /* BaseProjectUITests.m */; };
 		84E9B3951D507FD6004264BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E9B3941D507FD6004264BF /* AppDelegate.m */; };
@@ -272,6 +273,8 @@
 		847F8EF31D532A7D0039291C /* ALCustomBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCustomBarButtonItem.h; sourceTree = "<group>"; };
 		847F8EF41D532A7D0039291C /* ALCustomBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCustomBarButtonItem.m; sourceTree = "<group>"; };
 		847F8EF61D532ABA0039291C /* ALCustomKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALCustomKit.h; sourceTree = "<group>"; };
+		847F8EFD1D5350660039291C /* UIViewController+ALAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ALAction.h"; sourceTree = "<group>"; };
+		847F8EFE1D5350660039291C /* UIViewController+ALAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ALAction.m"; sourceTree = "<group>"; };
 		84E9B3381D507500004264BF /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E9B3511D507500004264BF /* BaseProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E9B3551D507500004264BF /* BaseProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseProjectTests.m; sourceTree = "<group>"; };
@@ -478,6 +481,8 @@
 				842A48E21D51A19F008CBEB3 /* UIView+ALCustomBorder.m */,
 				842A48E31D51A19F008CBEB3 /* UIView+ALFrame.h */,
 				842A48E41D51A19F008CBEB3 /* UIView+ALFrame.m */,
+				847F8EFD1D5350660039291C /* UIViewController+ALAction.h */,
+				847F8EFE1D5350660039291C /* UIViewController+ALAction.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1144,6 +1149,7 @@
 				842791251D5087BA0012F194 /* HttpRequest.m in Sources */,
 				842790F41D5087AB0012F194 /* AFNetworkReachabilityManager.m in Sources */,
 				842791361D50983A0012F194 /* MBProgressHUD+Add.m in Sources */,
+				847F8EFF1D5350660039291C /* UIViewController+ALAction.m in Sources */,
 				842A48661D519A35008CBEB3 /* RegisterViewController.m in Sources */,
 				842A49461D51E2C4008CBEB3 /* CYLPlusButtonSubclass.m in Sources */,
 				847F8EE51D530EF90039291C /* FourBseViewController.m in Sources */,

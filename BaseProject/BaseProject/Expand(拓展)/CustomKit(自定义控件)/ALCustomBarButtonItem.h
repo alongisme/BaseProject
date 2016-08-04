@@ -12,4 +12,7 @@ typedef void(^BarButtonItemClickAction)(id button);
 
 @interface ALCustomBarButtonItem : UIBarButtonItem
 + (ALCustomBarButtonItem *)CreateBarButtonItemWithImageName:(NSString *)imageName hlImageName:(NSString *)hlImageName barButtonAction:(BarButtonItemClickAction)barButtonAction;
+
++ (ALCustomBarButtonItem *)CreateBarButtonItemWithImageName:(NSString *)imageName hlImageName:(NSString *)hlImageName Frame:(CGRect)frame barButtonAction:(BarButtonItemClickAction)barButtonAction;
+
 @end

@@ -11,13 +11,18 @@
 @implementation ALCustomBarButtonItem
 + (ALCustomBarButtonItem *)CreateBarButtonItemWithImageName:(NSString *)imageName hlImageName:(NSString *)hlImageName barButtonAction:(BarButtonItemClickAction)barButtonAction {
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    
     UIImage *image = [UIImage imageNamed:imageName];
     
-    [button setFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
+    return [self CreateBarButtonItemWithImageName:imageName hlImageName:hlImageName Frame:CGRectMake(0, 0, image.size.width, image.size.height) barButtonAction:barButtonAction];
     
-    [button setImage:image forState:UIControlStateNormal];
+}
+
++ (ALCustomBarButtonItem *)CreateBarButtonItemWithImageName:(NSString *)imageName hlImageName:(NSString *)hlImageName Frame:(CGRect)frame barButtonAction:(BarButtonItemClickAction)barButtonAction {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [button setFrame:frame];
+    
+    [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     
     [button setImage:[UIImage imageNamed:hlImageName] forState:UIControlStateHighlighted];
     
@@ -26,6 +31,5 @@
     }];
     
     return [[self alloc]initWithCustomView:button];
-    
 }
 @end

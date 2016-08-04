@@ -8,6 +8,7 @@
 
 #import "TwoBaseViewController.h"
 
+
 @interface TwoBaseViewController ()
 
 @end
@@ -18,7 +19,7 @@
     [super viewDidLoad];
     
     [self.view setBackgroundColor:[UIColor AL_randomColor]];
-    
+        
 }
 
 - (void)didReceiveMemoryWarning {

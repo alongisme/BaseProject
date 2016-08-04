@@ -7,6 +7,7 @@
 //
 
 #import "MainNavigationController.h"
+#import "UIViewController+ALAction.h"
 
 @interface MainNavigationController ()<UIGestureRecognizerDelegate,UINavigationControllerDelegate>
 @property (nonatomic,weak)id popDelegate;
@@ -65,6 +66,11 @@
     AL_WeakSelf(self);
 
     return [ALCustomBarButtonItem CreateBarButtonItemWithImageName:@"back_nor" hlImageName:@"back_sel" barButtonAction:^(id button) {
+        
+        if([viewController respondsToSelector:@selector(NavigationItemLeftButtonClickActionWithButton:)]) {
+            [viewController NavigationItemLeftButtonClickActionWithButton:button];
+        }
+        
         [weakself popViewControllerAnimated:YES];
     }];
 }

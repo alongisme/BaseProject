@@ -51,5 +51,6 @@
 //UIView
 #import "UIView+ALCustomBorder.h" //上下左右的边框线
 #import "UIView+ALFrame.h" //View frame
-
+//UIViewController
+#import "UIViewController+ALAction.h" //控制器事件
 #endif /* CommonCategory_h */
