@@ -1,0 +1,26 @@
+//
+//  CommonMacros.pch
+//  BaseProject
+//
+//  Created by admin on 16/8/2.
+//  Copyright © 2016年 along. All rights reserved.
+//
+
+#ifndef CommonMacros_pch
+#define CommonMacros_pch
+
+//网络请求
+#import "HttpClient.h"
+
+//消息提示
+#import "MBProgressHUD+Add.h"
+
+//自定义宏
+#import "CommonMacro.h"
+
+//Category
+#import "CommonCategory.h"
+
+//网络数据模型
+#import "NetWorkModel.h"
+#endif /* CommonMacros_pch */
