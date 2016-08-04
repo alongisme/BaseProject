@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CYLTabBarControllerConfig.h"
+#import "FristLaunchViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +25,10 @@
     //判断是否第一次启动
     if([self AL_IsFristLaunchWithViewController:nil]) {
         
-        [self.window setRootViewController:[[NSClassFromString(@"FristLaunchViewController") alloc]init]];
+        FristLaunchViewController *fristLaunchVC = [[FristLaunchViewController alloc]initWithLoadImageArray:@[@"test",@"bg_top"]];
+        
+        [self.window setRootViewController:fristLaunchVC];
+
         
     }else {
         

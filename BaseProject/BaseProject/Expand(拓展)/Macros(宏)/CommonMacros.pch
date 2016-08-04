@@ -9,6 +9,9 @@
 #ifndef CommonMacros_pch
 #define CommonMacros_pch
 
+//程序总代理
+#import "AppDelegate.h"
+
 //网络请求
 #import "HttpClient.h"
 
@@ -23,4 +26,7 @@
 
 //网络数据模型
 #import "NetWorkModel.h"
+
+//自定义控件
+#import "ALCustomKit.h"
 #endif /* CommonMacros_pch */

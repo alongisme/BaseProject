@@ -24,7 +24,10 @@
 @end
 
 //View Controllers
-
+#import "OneBaseViewController.h"
+#import "TwoBaseViewController.h"
+#import "FourBseViewController.h"
+#import "FiveBaseViewController.h"
 
 @interface CYLTabBarControllerConfig ()
 
@@ -50,23 +53,31 @@
 }
 
 - (NSArray *)viewControllers {
-    UIViewController *firstViewController = [[UIViewController alloc] init];
+    OneBaseViewController *firstViewController = [[OneBaseViewController alloc] init];
 
     UIViewController *firstNavigationController = [[MainNavigationController alloc]
                                                    initWithRootViewController:firstViewController];
     
-    UIViewController *secondViewController = [[UIViewController alloc] init];
+    TwoBaseViewController *secondViewController = [[TwoBaseViewController alloc] init];
     UIViewController *secondNavigationController = [[MainNavigationController alloc]
                                                     initWithRootViewController:secondViewController];
     
-    UIViewController *thirdViewController = [[UIViewController alloc] init];
+    FourBseViewController *thirdViewController = [[FourBseViewController alloc] init];
     UIViewController *thirdNavigationController = [[MainNavigationController alloc]
                                                    initWithRootViewController:thirdViewController];
     
-    UIViewController *fourthViewController = [[UIViewController alloc] init];
+    FiveBaseViewController *fourthViewController = [[FiveBaseViewController alloc] init];
     UIViewController *fourthNavigationController = [[MainNavigationController alloc]
                                                     initWithRootViewController:fourthViewController];
+    [firstViewController.view setBackgroundColor:[UIColor AL_randomColor]];
+    [secondViewController.view setBackgroundColor:[UIColor AL_randomColor]];
+    [thirdViewController.view setBackgroundColor:[UIColor AL_randomColor]];
+    [fourthViewController.view setBackgroundColor:[UIColor AL_randomColor]];
     
+    firstViewController.navigationItem.title = @"测试1";
+    secondViewController.navigationItem.title = @"测试2";
+    thirdViewController.navigationItem.title = @"测试3";
+    fourthViewController.navigationItem.title = @"测试4";
     /**
      * 以下两行代码目的在于手动设置让TabBarItem只显示图标，不显示文字，并让图标垂直居中。
      * 等效于在 `-tabBarItemsAttributesForController` 方法中不传 `CYLTabBarItemTitle` 字段。

@@ -16,6 +16,9 @@
 #define ALLog(...)
 #endif
 
+//AppDelegate
+#define ALAppDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
+
 //KeyWindow
 #define ALKeyWindow [UIApplication sharedApplication].keyWindow
 

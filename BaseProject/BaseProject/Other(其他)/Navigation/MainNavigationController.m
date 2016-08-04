@@ -8,8 +8,8 @@
 
 #import "MainNavigationController.h"
 
-@interface MainNavigationController ()<UIGestureRecognizerDelegate>
-
+@interface MainNavigationController ()<UIGestureRecognizerDelegate,UINavigationControllerDelegate>
+@property (nonatomic,weak)id popDelegate;
 @end
 
 @implementation MainNavigationController
@@ -18,21 +18,55 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    AL_WeakSelf(self);
+    self.popDelegate = self.interactivePopGestureRecognizer.delegate;
     
-    if([self respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        [self.interactivePopGestureRecognizer setDelegate:weakself];
-    }
-    
+    [self setDelegate:self];
+        
     [self setUpNavigationBarAppearance];
     
 }
 
 - (void)setUpNavigationBarAppearance {
     
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage AL_createImageWithColor:[UIColor AL_randomColor]] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:18],NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor blueColor]];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:22],NSForegroundColorAttributeName:[UIColor whiteColor]}];
+}
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+//    if([viewController isKindOfClass:NSClassFromString(@"FiveBaseViewController")]) {
+//        [viewController.navigationController setNavigationBarHidden:YES animated:YES];
+//    }else {
+//        [viewController.navigationController setNavigationBarHidden:NO animated:YES];
+//    }
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if(viewController == [self.viewControllers firstObject]) {
+        [self.interactivePopGestureRecognizer setDelegate:self.popDelegate];
+    }else {
+        [self.interactivePopGestureRecognizer setDelegate:nil];
+    }
+}
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    
+    if([self.viewControllers count] > 0) {
+        [viewController.navigationItem setLeftBarButtonItem:[self createLeftItemWithController:viewController]];
+        [viewController setHidesBottomBarWhenPushed:YES];
+    }
+    [super pushViewController:viewController animated:animated];
+}
+
+- (UIBarButtonItem *)createLeftItemWithController:(UIViewController *)viewController {
+    
+    AL_WeakSelf(self);
+
+    return [ALCustomBarButtonItem CreateBarButtonItemWithImageName:@"back_nor" hlImageName:@"back_sel" barButtonAction:^(id button) {
+        [weakself popViewControllerAnimated:YES];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

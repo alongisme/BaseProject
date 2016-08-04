@@ -10,4 +10,6 @@
 
 @interface FristLaunchViewController : UIViewController
 
+- (instancetype)initWithLoadImageArray:(NSArray *)loadImageArray;
+
 @end
