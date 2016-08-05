@@ -18,10 +18,11 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     [self.tableview setDelegate:self];
+    [self scrollViewDidScroll:self.tableview];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
+    [super viewWillDisappear:YES];
     [self.tableview setDelegate:nil];
     [self.navigationController.navigationBar AL_reset];
 }
@@ -37,6 +38,7 @@
     CGFloat offsetY = scrollView.contentOffset.y;
     if (offsetY > 64) {
         CGFloat alpha = MIN(1, 1 - ((64 + 64 - offsetY) / 64));
+                
         [self.navigationController.navigationBar AL_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
     } else {
         [self.navigationController.navigationBar AL_setBackgroundColor:[color colorWithAlphaComponent:0]];

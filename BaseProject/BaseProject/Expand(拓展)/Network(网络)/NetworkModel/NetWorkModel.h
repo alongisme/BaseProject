@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JSONModel.h"
 
-#define AL_JSONPROPERTYNONATOMICSTRONG(name) @property (nonatomic,strong)NSString<Optional> *name
+#define AL_JSONPROPERTYNONATOMICSTRONG(name) @property (nonatomic,copy)NSString<Optional> *name
 
 //用户信息
 @interface UserInfoModel : JSONModel

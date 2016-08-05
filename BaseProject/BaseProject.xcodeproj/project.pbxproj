@@ -89,6 +89,7 @@
 		847F8EEE1D53218B0039291C /* ALSettingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 847F8EED1D53218B0039291C /* ALSettingTools.m */; };
 		847F8EF51D532A7D0039291C /* ALCustomBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 847F8EF41D532A7D0039291C /* ALCustomBarButtonItem.m */; };
 		847F8EFF1D5350660039291C /* UIViewController+ALAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 847F8EFE1D5350660039291C /* UIViewController+ALAction.m */; };
+		849BE7921D545D1000FF229B /* UIViewController+ALUniversalPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 849BE7911D545D1000FF229B /* UIViewController+ALUniversalPush.m */; };
 		84E9B3561D507500004264BF /* BaseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E9B3551D507500004264BF /* BaseProjectTests.m */; };
 		84E9B3611D507501004264BF /* BaseProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E9B3601D507501004264BF /* BaseProjectUITests.m */; };
 		84E9B3951D507FD6004264BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E9B3941D507FD6004264BF /* AppDelegate.m */; };
@@ -275,6 +276,9 @@
 		847F8EF61D532ABA0039291C /* ALCustomKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALCustomKit.h; sourceTree = "<group>"; };
 		847F8EFD1D5350660039291C /* UIViewController+ALAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ALAction.h"; sourceTree = "<group>"; };
 		847F8EFE1D5350660039291C /* UIViewController+ALAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ALAction.m"; sourceTree = "<group>"; };
+		849BE7901D545D1000FF229B /* UIViewController+ALUniversalPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ALUniversalPush.h"; sourceTree = "<group>"; };
+		849BE7911D545D1000FF229B /* UIViewController+ALUniversalPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ALUniversalPush.m"; sourceTree = "<group>"; };
+		849BE7961D5473A900FF229B /* CommonConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonConst.h; sourceTree = "<group>"; };
 		84E9B3381D507500004264BF /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E9B3511D507500004264BF /* BaseProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E9B3551D507500004264BF /* BaseProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseProjectTests.m; sourceTree = "<group>"; };
@@ -483,6 +487,8 @@
 				842A48E41D51A19F008CBEB3 /* UIView+ALFrame.m */,
 				847F8EFD1D5350660039291C /* UIViewController+ALAction.h */,
 				847F8EFE1D5350660039291C /* UIViewController+ALAction.m */,
+				849BE7901D545D1000FF229B /* UIViewController+ALUniversalPush.h */,
+				849BE7911D545D1000FF229B /* UIViewController+ALUniversalPush.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -842,6 +848,7 @@
 		84E9B3861D5077A8004264BF /* Const(常量) */ = {
 			isa = PBXGroup;
 			children = (
+				849BE7961D5473A900FF229B /* CommonConst.h */,
 			);
 			path = "Const(常量)";
 			sourceTree = "<group>";
@@ -1137,6 +1144,7 @@
 				842A48E91D51A19F008CBEB3 /* NSTimer+ALBlocks.m in Sources */,
 				842A49561D51FA22008CBEB3 /* UIImage+ALColorImage.m in Sources */,
 				842A48F81D51A19F008CBEB3 /* UITextView+ALPlaceHolder.m in Sources */,
+				849BE7921D545D1000FF229B /* UIViewController+ALUniversalPush.m in Sources */,
 				842A49281D51C970008CBEB3 /* JSONModel.m in Sources */,
 				842A48F01D51A19F008CBEB3 /* UIImageView+ALAddition.m in Sources */,
 				842790F61D5087AB0012F194 /* AFURLRequestSerialization.m in Sources */,

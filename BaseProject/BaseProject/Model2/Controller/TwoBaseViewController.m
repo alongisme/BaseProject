@@ -9,8 +9,17 @@
 #import "TwoBaseViewController.h"
 
 
-@interface TwoBaseViewController ()
-
+@interface TwoBaseViewController (){
+    int a;
+    NSString *oiuo;
+    double d;
+    NSArray *ppoi;
+}
+@property (nonatomic,strong)NSArray *aaa;
+@property (nonatomic,strong)NSDictionary *asd;
+@property (nonatomic,strong)NSArray *xzc;
+@property (nonatomic,strong)NSNumber *ssa;
+@property (nonatomic,strong)NSString *df;
 @end
 
 @implementation TwoBaseViewController

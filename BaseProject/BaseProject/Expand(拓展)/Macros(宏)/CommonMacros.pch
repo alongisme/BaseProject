@@ -29,4 +29,7 @@
 
 //自定义控件
 #import "ALCustomKit.h"
+
+//常量
+#import "commonConst.h"
 #endif /* CommonMacros_pch */

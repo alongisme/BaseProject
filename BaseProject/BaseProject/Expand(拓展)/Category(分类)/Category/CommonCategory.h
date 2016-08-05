@@ -53,4 +53,5 @@
 #import "UIView+ALFrame.h" //View frame
 //UIViewController
 #import "UIViewController+ALAction.h" //控制器事件
+#import "UIViewController+ALUniversalPush.h"//万能跳转
 #endif /* CommonCategory_h */

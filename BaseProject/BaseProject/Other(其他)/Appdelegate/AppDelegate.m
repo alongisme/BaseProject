@@ -22,15 +22,26 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor blueColor]];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:22],NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    
+    [[UINavigationBar appearance] setShadowImage:[UIImage new]];
+    
     //判断是否第一次启动
     if([self AL_IsFristLaunchWithViewController:nil]) {
         
+        //引导图
         FristLaunchViewController *fristLaunchVC = [[FristLaunchViewController alloc]initWithLoadImageArray:@[@"test",@"bg_top"]];
         
         [self.window setRootViewController:fristLaunchVC];
 
         
     }else {
+        
+        //非第一次启动进入
         
         CYLTabBarControllerConfig *tabBarControllerConfig = [[CYLTabBarControllerConfig alloc]init];
         
