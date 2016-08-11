@@ -197,12 +197,12 @@ static void * const CYLSwappableImageViewDefaultOffsetContext = (void*)&CYLSwapp
                 selectedImageName:(NSString *)selectedImageName {
         
     viewController.tabBarItem.title = title;
-    if (normalImageName) {
+    if (![normalImageName AL_checkIsStringEmpty]) {
         UIImage *normalImage = [UIImage imageNamed:normalImageName];
         normalImage = [normalImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         viewController.tabBarItem.image = normalImage;
     }
-    if (selectedImageName) {
+    if (![selectedImageName AL_checkIsStringEmpty]) {
         UIImage *selectedImage = [UIImage imageNamed:selectedImageName];
         selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         viewController.tabBarItem.selectedImage = selectedImage;
