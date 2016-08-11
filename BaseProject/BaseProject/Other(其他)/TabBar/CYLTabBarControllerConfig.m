@@ -6,7 +6,8 @@
 //  Copyright © 2015 https://github.com/ChenYilong . All rights reserved.
 //
 #import "CYLTabBarControllerConfig.h"
-#import "MainNavigationController.h"
+
+#define PlistFileName @"MainViewControllerList.plist" //文件名 路径在 Resource(资源)/Plist/MainViewControllerList.plist
 
 @import Foundation;
 @import UIKit;
@@ -24,18 +25,23 @@
 @end
 
 //View Controllers
-#import "OneBaseViewController.h"
-#import "TwoBaseViewController.h"
-#import "FourBseViewController.h"
-#import "FiveBaseViewController.h"
+
 
 @interface CYLTabBarControllerConfig ()
 
 @property (nonatomic, readwrite, strong) CYLTabBarController *tabBarController;
 
+@property (nonatomic,strong)NSArray *plistArray;
 @end
 
 @implementation CYLTabBarControllerConfig
+
+- (NSArray *)plistArray {
+    if(!_plistArray) {
+        _plistArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:PlistFileName ofType:nil]];
+    }
+    return _plistArray;
+}
 
 /**
  *  lazy load tabBarController
@@ -53,75 +59,115 @@
 }
 
 - (NSArray *)viewControllers {
-    OneBaseViewController *firstViewController = [[OneBaseViewController alloc] init];
-
-    UIViewController *firstNavigationController = [[MainNavigationController alloc]
-                                                   initWithRootViewController:firstViewController];
     
-    TwoBaseViewController *secondViewController = [[TwoBaseViewController alloc] init];
-    UIViewController *secondNavigationController = [[MainNavigationController alloc]
-                                                    initWithRootViewController:secondViewController];
+    //根据plist文件运行时创建控制器 （ALRuntimeTools）
     
-    FourBseViewController *thirdViewController = [[FourBseViewController alloc] init];
-    UIViewController *thirdNavigationController = [[MainNavigationController alloc]
-                                                   initWithRootViewController:thirdViewController];
+    NSMutableArray *viewControllers = [NSMutableArray array];
     
-    FiveBaseViewController *fourthViewController = [[FiveBaseViewController alloc] init];
-    UIViewController *fourthNavigationController = [[MainNavigationController alloc]
-                                                    initWithRootViewController:fourthViewController];
-    [firstViewController.view setBackgroundColor:[UIColor AL_randomColor]];
-    [secondViewController.view setBackgroundColor:[UIColor AL_randomColor]];
-    [thirdViewController.view setBackgroundColor:[UIColor AL_randomColor]];
-    [fourthViewController.view setBackgroundColor:[UIColor AL_randomColor]];
+    for (NSDictionary *dic in self.plistArray) {
+        
+        NSString *NavName = [dic objectForKey:@"NavName"];
+        
+        NSString *ControllerName = [dic objectForKey:@"ControllerName"];
+        
+        NSString *ControllerTitle = [dic objectForKey:@"ControllerTitle"];
+        
+        id viewController = AL_MsgSendWithObj(AL_MsgSendWithObj(AL_CreateClassWithName(ControllerName), @"alloc"), @"init");
+        
+        id NavigationViewController = AL_MsgSendWithObjs(AL_MsgSendWithObj(AL_CreateClassWithName(NavName), @"alloc"), @"initWithRootViewController:", @[viewController]);
+        
+        if(ControllerTitle) {
+            id ControllerView = AL_MsgSendWithObj(viewController , @"navigationItem");
+            [ControllerView setValue:ControllerTitle forKey:@"title"];
+        }
+        
+        if(NavigationViewController) {
+            [viewControllers addObject:NavigationViewController];
+        }
+    }
     
-    firstViewController.navigationItem.title = @"测试1";
-    secondViewController.navigationItem.title = @"测试2";
-    thirdViewController.navigationItem.title = @"测试3";
-    fourthViewController.navigationItem.title = @"测试4";
-    /**
-     * 以下两行代码目的在于手动设置让TabBarItem只显示图标，不显示文字，并让图标垂直居中。
-     * 等效于在 `-tabBarItemsAttributesForController` 方法中不传 `CYLTabBarItemTitle` 字段。
-     * 更推荐后一种做法。
-     */
-    //tabBarController.imageInsets = UIEdgeInsetsMake(4.5, 0, -4.5, 0);
-    //tabBarController.titlePositionAdjustment = UIOffsetMake(0, MAXFLOAT);
-    NSArray *viewControllers = @[
-                                 firstNavigationController,
-                                 secondNavigationController,
-                                 thirdNavigationController,
-                                 fourthNavigationController
-                                 ];
-    return viewControllers;
+    return [viewControllers copy];
+    
+    //自己加头文件的创建
+//    CYLHomeViewController *firstViewController = [[CYLHomeViewController alloc] init];
+//    UIViewController *firstNavigationController = [[CYLBaseNavigationController alloc]
+//                                                   initWithRootViewController:firstViewController];
+//    
+//    CYLSameCityViewController *secondViewController = [[CYLSameCityViewController alloc] init];
+//    UIViewController *secondNavigationController = [[CYLBaseNavigationController alloc]
+//                                                    initWithRootViewController:secondViewController];
+//    
+//    CYLMessageViewController *thirdViewController = [[CYLMessageViewController alloc] init];
+//    UIViewController *thirdNavigationController = [[CYLBaseNavigationController alloc]
+//                                                   initWithRootViewController:thirdViewController];
+//    
+//    CYLMineViewController *fourthViewController = [[CYLMineViewController alloc] init];
+//    UIViewController *fourthNavigationController = [[CYLBaseNavigationController alloc]
+//                                                    initWithRootViewController:fourthViewController];
+//    
+//    /**
+//     * 以下两行代码目的在于手动设置让TabBarItem只显示图标，不显示文字，并让图标垂直居中。
+//     * 等效于在 `-tabBarItemsAttributesForController` 方法中不传 `CYLTabBarItemTitle` 字段。
+//     * 更推荐后一种做法。
+//     */
+//    //tabBarController.imageInsets = UIEdgeInsetsMake(4.5, 0, -4.5, 0);
+//    //tabBarController.titlePositionAdjustment = UIOffsetMake(0, MAXFLOAT);
+//    NSArray *viewControllers = @[
+//                                 firstNavigationController,
+//                                 secondNavigationController,
+//                                 thirdNavigationController,
+//                                 fourthNavigationController
+//                                 ];
+//    return viewControllers;
+    
 }
 
 - (NSArray *)tabBarItemsAttributesForController {
-    NSDictionary *firstTabBarItemsAttributes = @{
-                                                 CYLTabBarItemTitle : @"首页",
-                                                 CYLTabBarItemImage : @"home_normal",
-                                                 CYLTabBarItemSelectedImage : @"home_highlight",
-                                                 };
-    NSDictionary *secondTabBarItemsAttributes = @{
-                                                  CYLTabBarItemTitle : @"同城",
-                                                  CYLTabBarItemImage : @"mycity_normal",
-                                                  CYLTabBarItemSelectedImage : @"mycity_highlight",
-                                                  };
-    NSDictionary *thirdTabBarItemsAttributes = @{
-                                                 CYLTabBarItemTitle : @"消息",
-                                                 CYLTabBarItemImage : @"message_normal",
-                                                 CYLTabBarItemSelectedImage : @"message_highlight",
-                                                 };
-    NSDictionary *fourthTabBarItemsAttributes = @{
-                                                  CYLTabBarItemTitle : @"我的",
-                                                  CYLTabBarItemImage : @"account_normal",
-                                                  CYLTabBarItemSelectedImage : @"account_highlight"
-                                                  };
-    NSArray *tabBarItemsAttributes = @[
-                                       firstTabBarItemsAttributes,
-                                       secondTabBarItemsAttributes,
-                                       thirdTabBarItemsAttributes,
-                                       fourthTabBarItemsAttributes
-                                       ];
-    return tabBarItemsAttributes;
+    
+    //调用plist文件数据
+    
+    NSMutableArray *tabBarItemsAttributes = [NSMutableArray array];
+    
+    for (NSDictionary *dic in self.plistArray) {
+        NSDictionary *firstTabBarItemsAttributes = @{
+                                                     CYLTabBarItemTitle : [dic objectForKey:@"ItemTitle"],
+                                                     CYLTabBarItemImage : [dic objectForKey:@"ItemImage"],
+                                                     CYLTabBarItemSelectedImage : [dic objectForKey:@"ItemSelectedImage"],
+                                                     };
+        
+        [tabBarItemsAttributes addObject:firstTabBarItemsAttributes];
+    }
+    
+    return [tabBarItemsAttributes copy];
+    
+    //属性数组自己创建
+//    NSDictionary *firstTabBarItemsAttributes = @{
+//                                                 CYLTabBarItemTitle : @"首页",
+//                                                 CYLTabBarItemImage : @"home_normal",
+//                                                 CYLTabBarItemSelectedImage : @"home_highlight",
+//                                                 };
+//    NSDictionary *secondTabBarItemsAttributes = @{
+//                                                  CYLTabBarItemTitle : @"同城",
+//                                                  CYLTabBarItemImage : @"mycity_normal",
+//                                                  CYLTabBarItemSelectedImage : @"mycity_highlight",
+//                                                  };
+//    NSDictionary *thirdTabBarItemsAttributes = @{
+//                                                 CYLTabBarItemTitle : @"消息",
+//                                                 CYLTabBarItemImage : @"message_normal",
+//                                                 CYLTabBarItemSelectedImage : @"message_highlight",
+//                                                 };
+//    NSDictionary *fourthTabBarItemsAttributes = @{
+//                                                  CYLTabBarItemTitle : @"我的",
+//                                                  CYLTabBarItemImage : @"account_normal",
+//                                                  CYLTabBarItemSelectedImage : @"account_highlight"
+//                                                  };
+//    NSArray *tabBarItemsAttributes = @[
+//                                       firstTabBarItemsAttributes,
+//                                       secondTabBarItemsAttributes,
+//                                       thirdTabBarItemsAttributes,
+//                                       fourthTabBarItemsAttributes
+//                                       ];
+//    return tabBarItemsAttributes;
 }
 
 /**
@@ -179,9 +225,9 @@
     void (^deviceOrientationDidChangeBlock)(NSNotification *) = ^(NSNotification *notification) {
         UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
         if ((orientation == UIDeviceOrientationLandscapeLeft) || (orientation == UIDeviceOrientationLandscapeRight)) {
-            NSLog(@"Landscape Left or Right !");
+            ALLog(@"Landscape Left or Right !");
         } else if (orientation == UIDeviceOrientationPortrait) {
-            NSLog(@"Landscape portrait!");
+            ALLog(@"Landscape portrait!");
         }
         [self customizeTabBarSelectionIndicatorImage];
     };

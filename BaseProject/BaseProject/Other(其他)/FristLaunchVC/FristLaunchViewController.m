@@ -41,7 +41,7 @@
         if(i == [_loadImageArray count] - 1) {
             UIButton *pushButton = [UIButton buttonWithType:UIButtonTypeCustom];
             [pushButton setFrame:CGRectMake(0, 0, 200, 40)];
-            [pushButton setBackgroundColor:[UIColor redColor]];
+            [pushButton setBackgroundColor:[UIColor clearColor]];
             [scrollView addSubview:pushButton];
             
             [pushButton AL_handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakSender) {

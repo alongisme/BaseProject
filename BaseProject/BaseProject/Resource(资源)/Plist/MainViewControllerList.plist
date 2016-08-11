@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>NavName</key>
+		<string>MainNavigationController</string>
+		<key>ControllerName</key>
+		<string>OneBaseViewController</string>
+		<key>ControllerTitle</key>
+		<string>测试1</string>
+		<key>ItemTitle</key>
+		<string>首页</string>
+		<key>ItemImage</key>
+		<string></string>
+		<key>ItemSelectedImage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>NavName</key>
+		<string>MainNavigationController</string>
+		<key>ControllerName</key>
+		<string>TwoBaseViewController</string>
+		<key>ControllerTitle</key>
+		<string>测试2</string>
+		<key>ItemTitle</key>
+		<string>测试2</string>
+		<key>ItemImage</key>
+		<string></string>
+		<key>ItemSelectedImage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>NavName</key>
+		<string>MainNavigationController</string>
+		<key>ControllerName</key>
+		<string>FourBseViewController</string>
+		<key>ControllerTitle</key>
+		<string>测试3</string>
+		<key>ItemTitle</key>
+		<string>测试3</string>
+		<key>ItemImage</key>
+		<string></string>
+		<key>ItemSelectedImage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>NavName</key>
+		<string>MainNavigationController</string>
+		<key>ControllerName</key>
+		<string>FiveBaseViewController</string>
+		<key>ControllerTitle</key>
+		<string>测试4</string>
+		<key>ItemTitle</key>
+		<string>测试4</string>
+		<key>ItemImage</key>
+		<string></string>
+		<key>ItemSelectedImage</key>
+		<string></string>
+	</dict>
+</array>
+</plist>

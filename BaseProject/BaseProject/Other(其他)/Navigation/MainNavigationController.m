@@ -48,19 +48,26 @@
     //统一设置左边item
     if([self.viewControllers count] > 0) {
         [viewController.navigationItem setLeftBarButtonItem:[self createLeftItemWithController:viewController]];
+        
+        //push的时候隐藏bar
         [viewController setHidesBottomBarWhenPushed:YES];
+        
+//        设置偏移量 （UINavigationItem+ALMargin）
+//        [viewController.navigationItem setAL_leftMargin:100];
+//        [viewController.navigationItem setAL_rightMargin:0];
     }
     [super pushViewController:viewController animated:animated];
 }
 
-//返回一个leftItem
+//返回一个leftItem (ALCustomBarButtonItem)
 - (UIBarButtonItem *)createLeftItemWithController:(UIViewController *)viewController {
     
     AL_WeakSelf(self);
-
+    
+    //返回一个leftItem (ALCustomBarButtonItem)
     return [ALCustomBarButtonItem CreateBarButtonItemWithImageName:@"back_nor" hlImageName:@"back_sel" barButtonAction:^(id button) {
         
-        //判断是否有控制器实现左按钮点击方法 有则调用
+        //判断是否有控制器实现左按钮点击方法 有则调用 （UIViewController_ALAction）
         if([viewController respondsToSelector:@selector(NavigationItemLeftButtonClickActionWithButton:)]) {
             [viewController NavigationItemLeftButtonClickActionWithButton:button];
         }

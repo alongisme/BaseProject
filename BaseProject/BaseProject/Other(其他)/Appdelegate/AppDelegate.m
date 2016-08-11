@@ -22,15 +22,13 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
+    //设置导航栏属性
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    
     [[UINavigationBar appearance] setBarTintColor:[UIColor blueColor]];
-    
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:22],NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    
     [[UINavigationBar appearance] setShadowImage:[UIImage new]];
     
-    //判断是否第一次启动
+    //判断是否第一次启动 （NSObject_ALFristLaunch）
     if([self AL_IsFristLaunchWithViewController:nil]) {
         
         //引导图
@@ -42,7 +40,6 @@
     }else {
         
         //非第一次启动进入
-        
         CYLTabBarControllerConfig *tabBarControllerConfig = [[CYLTabBarControllerConfig alloc]init];
         
         [self.window setRootViewController:tabBarControllerConfig.tabBarController];

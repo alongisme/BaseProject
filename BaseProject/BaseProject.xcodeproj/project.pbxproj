@@ -86,10 +86,11 @@
 		847F8EE61D530EF90039291C /* FourBseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847F8EE41D530EF90039291C /* FourBseViewController.xib */; };
 		847F8EEA1D530F0A0039291C /* FiveBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847F8EE81D530F0A0039291C /* FiveBaseViewController.m */; };
 		847F8EEB1D530F0A0039291C /* FiveBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847F8EE91D530F0A0039291C /* FiveBaseViewController.xib */; };
-		847F8EEE1D53218B0039291C /* ALSettingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 847F8EED1D53218B0039291C /* ALSettingTools.m */; };
 		847F8EF51D532A7D0039291C /* ALCustomBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 847F8EF41D532A7D0039291C /* ALCustomBarButtonItem.m */; };
 		847F8EFF1D5350660039291C /* UIViewController+ALAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 847F8EFE1D5350660039291C /* UIViewController+ALAction.m */; };
 		849BE7921D545D1000FF229B /* UIViewController+ALUniversalPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 849BE7911D545D1000FF229B /* UIViewController+ALUniversalPush.m */; };
+		84D3B7271D5C2535005A5A42 /* ALRuntimeTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3B7261D5C2535005A5A42 /* ALRuntimeTools.m */; };
+		84D3B7291D5C4837005A5A42 /* MainViewControllerList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84D3B7281D5C4837005A5A42 /* MainViewControllerList.plist */; };
 		84E9B3561D507500004264BF /* BaseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E9B3551D507500004264BF /* BaseProjectTests.m */; };
 		84E9B3611D507501004264BF /* BaseProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E9B3601D507501004264BF /* BaseProjectUITests.m */; };
 		84E9B3951D507FD6004264BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E9B3941D507FD6004264BF /* AppDelegate.m */; };
@@ -269,8 +270,6 @@
 		847F8EE71D530F0A0039291C /* FiveBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveBaseViewController.h; sourceTree = "<group>"; };
 		847F8EE81D530F0A0039291C /* FiveBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveBaseViewController.m; sourceTree = "<group>"; };
 		847F8EE91D530F0A0039291C /* FiveBaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiveBaseViewController.xib; sourceTree = "<group>"; };
-		847F8EEC1D53218B0039291C /* ALSettingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSettingTools.h; sourceTree = "<group>"; };
-		847F8EED1D53218B0039291C /* ALSettingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALSettingTools.m; sourceTree = "<group>"; };
 		847F8EF31D532A7D0039291C /* ALCustomBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCustomBarButtonItem.h; sourceTree = "<group>"; };
 		847F8EF41D532A7D0039291C /* ALCustomBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCustomBarButtonItem.m; sourceTree = "<group>"; };
 		847F8EF61D532ABA0039291C /* ALCustomKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALCustomKit.h; sourceTree = "<group>"; };
@@ -279,6 +278,9 @@
 		849BE7901D545D1000FF229B /* UIViewController+ALUniversalPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ALUniversalPush.h"; sourceTree = "<group>"; };
 		849BE7911D545D1000FF229B /* UIViewController+ALUniversalPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ALUniversalPush.m"; sourceTree = "<group>"; };
 		849BE7961D5473A900FF229B /* CommonConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonConst.h; sourceTree = "<group>"; };
+		84D3B7251D5C2535005A5A42 /* ALRuntimeTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRuntimeTools.h; sourceTree = "<group>"; };
+		84D3B7261D5C2535005A5A42 /* ALRuntimeTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRuntimeTools.m; sourceTree = "<group>"; };
+		84D3B7281D5C4837005A5A42 /* MainViewControllerList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MainViewControllerList.plist; sourceTree = "<group>"; };
 		84E9B3381D507500004264BF /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E9B3511D507500004264BF /* BaseProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E9B3551D507500004264BF /* BaseProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseProjectTests.m; sourceTree = "<group>"; };
@@ -659,7 +661,7 @@
 		84E9B3701D507713004264BF /* Other(其他) */ = {
 			isa = PBXGroup;
 			children = (
-				84E9B38E1D507846004264BF /* Appdelegate */,
+				84E9B38E1D507846004264BF /* AppDelegate */,
 				84E9B38F1D507846004264BF /* Login */,
 				84E9B3901D507846004264BF /* Navigation */,
 				84E9B3921D507846004264BF /* TabBar */,
@@ -874,8 +876,8 @@
 		84E9B3891D5077A8004264BF /* Tool(工具类) */ = {
 			isa = PBXGroup;
 			children = (
-				847F8EEC1D53218B0039291C /* ALSettingTools.h */,
-				847F8EED1D53218B0039291C /* ALSettingTools.m */,
+				84D3B7251D5C2535005A5A42 /* ALRuntimeTools.h */,
+				84D3B7261D5C2535005A5A42 /* ALRuntimeTools.m */,
 			);
 			path = "Tool(工具类)";
 			sourceTree = "<group>";
@@ -911,16 +913,18 @@
 			isa = PBXGroup;
 			children = (
 				8427912F1D5096120012F194 /* Info.plist */,
+				84D3B7281D5C4837005A5A42 /* MainViewControllerList.plist */,
 			);
 			path = Plist;
 			sourceTree = "<group>";
 		};
-		84E9B38E1D507846004264BF /* Appdelegate */ = {
+		84E9B38E1D507846004264BF /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
 				84E9B3931D507FD6004264BF /* AppDelegate.h */,
 				84E9B3941D507FD6004264BF /* AppDelegate.m */,
 			);
+			name = AppDelegate;
 			path = Appdelegate;
 			sourceTree = "<group>";
 		};
@@ -1077,6 +1081,7 @@
 				847F8EDC1D530ED90039291C /* OneBaseViewController.xib in Resources */,
 				847F8EE11D530EEB0039291C /* TwoBaseViewController.xib in Resources */,
 				842A48671D519A35008CBEB3 /* RegisterViewController.xib in Resources */,
+				84D3B7291D5C4837005A5A42 /* MainViewControllerList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1153,6 +1158,7 @@
 				842A48F71D51A19F008CBEB3 /* UITextField+ALBlocks.m in Sources */,
 				842A48FB1D51A19F008CBEB3 /* UIView+ALFrame.m in Sources */,
 				842791271D5087BA0012F194 /* UploadModel.m in Sources */,
+				84D3B7271D5C2535005A5A42 /* ALRuntimeTools.m in Sources */,
 				842A48F21D51A19F008CBEB3 /* UILabel+ALSuggestSize.m in Sources */,
 				842791251D5087BA0012F194 /* HttpRequest.m in Sources */,
 				842790F41D5087AB0012F194 /* AFNetworkReachabilityManager.m in Sources */,
@@ -1166,7 +1172,6 @@
 				842A492C1D51C970008CBEB3 /* JSONHTTPClient.m in Sources */,
 				842A48ED1D51A19F008CBEB3 /* UIImage+ALImageCircle.m in Sources */,
 				842A48E81D51A19F008CBEB3 /* NSString+CommonCheck.m in Sources */,
-				847F8EEE1D53218B0039291C /* ALSettingTools.m in Sources */,
 				842790F71D5087AB0012F194 /* AFURLResponseSerialization.m in Sources */,
 				84E9B3951D507FD6004264BF /* AppDelegate.m in Sources */,
 				842A492D1D51C970008CBEB3 /* JSONModel+networking.m in Sources */,
@@ -1296,6 +1301,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/Expand(拓展)/Macros(宏)/CommonMacros.pch";
 				INFOPLIST_FILE = "$(PRODUCT_NAME)/Resource(资源)/Plist/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1313,6 +1319,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/Expand(拓展)/Macros(宏)/CommonMacros.pch";
 				INFOPLIST_FILE = "$(PRODUCT_NAME)/Resource(资源)/Plist/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
