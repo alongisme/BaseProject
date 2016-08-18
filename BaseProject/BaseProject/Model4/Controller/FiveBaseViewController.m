@@ -19,12 +19,13 @@
     [super viewWillAppear:YES];
     [self.tableview setDelegate:self];
     [self scrollViewDidScroll:self.tableview];
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:YES];
     [self.tableview setDelegate:nil];
-    [self.navigationController.navigationBar AL_reset];
+//    [self.navigationController.navigationBar AL_reset];
 }
 
 

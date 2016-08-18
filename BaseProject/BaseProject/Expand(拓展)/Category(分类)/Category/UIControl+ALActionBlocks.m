@@ -16,6 +16,7 @@ static const void *UIControlALActionBlockArray = &UIControlALActionBlockArray;
 - (void)AL_invokeBlock:(id)sender {
     if (self.AL_actionBlock) {
         self.AL_actionBlock(sender);
+        
     }
 }
 @end

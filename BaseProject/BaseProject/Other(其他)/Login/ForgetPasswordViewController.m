@@ -9,20 +9,53 @@
 #import "ForgetPasswordViewController.h"
 
 @interface ForgetPasswordViewController ()
-@property (nonatomic,weak)IBOutlet UITextField *phoneTextFiled;
-@property (nonatomic,weak)IBOutlet UITextField *codeTextFiled;
-@property (nonatomic,weak)IBOutlet UITextField *passwordTextFiled;
-@property (nonatomic,weak)IBOutlet UITextField *sePasswordTextFiled;
+@property (nonatomic,strong) UITextField *phoneTextFiled;
+@property (nonatomic,strong) UITextField *codeTextFiled;
+@property (nonatomic,strong) UITextField *passwordTextFiled;
+@property (nonatomic,strong) UITextField *sePasswordTextFiled;
+@property (nonatomic,strong) UIButton *sureButton;
 @end
 
 @implementation ForgetPasswordViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self setTitle:@"忘记密码"];
 }
 
-- (IBAction)SureAction:(UIButton *)sender {
+- (void)initWithSubviews {
+    _phoneTextFiled = [[UITextField alloc]init];
+    [_phoneTextFiled setPlaceholder:@"请输入手机号码"];
+    [self.view addSubview:_phoneTextFiled];
+    
+    _codeTextFiled = [[UITextField alloc]init];
+    [_codeTextFiled setPlaceholder:@"请输入验证码"];
+    [self.view addSubview:_codeTextFiled];
+    
+    _passwordTextFiled = [[UITextField alloc]init];
+    [_passwordTextFiled setPlaceholder:@"请输入密码"];
+    [self.view addSubview:_passwordTextFiled];
+    
+    _sePasswordTextFiled = [[UITextField alloc]init];
+    [_sePasswordTextFiled setPlaceholder:@"请再次输入密码"];
+    [self.view addSubview:_sePasswordTextFiled];
+    
+    _sureButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_sureButton setTitle:@"确 定" forState:UIControlStateNormal];
+    [_sureButton setTitle:@"确 定" forState:UIControlStateHighlighted];
+    
+    [_sureButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_sureButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    
+    [_sureButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+    [_sureButton setImage:[UIImage imageNamed:@""] forState:UIControlStateHighlighted];
+    
+    [_sureButton addTarget:self action:@selector(SureAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:_sureButton];
+}
+
+- (void)SureAction:(UIButton *)sender {
     if([_phoneTextFiled.text AL_checkIsStringEmpty]) {
         [MBProgressHUD showMessag:@"手机码号不能为空！" toView:ALKeyWindow];
         return;
@@ -62,7 +95,7 @@
 }
 
 //获取验证码
-- (IBAction)GetCodeAction:(UIButton *)sender {
+- (void)GetCodeAction:(UIButton *)sender {
     if([_phoneTextFiled.text AL_checkIsStringEmpty]) {
         [MBProgressHUD showMessag:@"手机码号不能为空！" toView:ALKeyWindow];
         return;
@@ -73,11 +106,9 @@
         return;
     }
     
-    __block UIButton *codeButton = sender;
-    
     [sender AL_handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakSender) {
         
-        [codeButton AL_startTime:1 title:@"获取验证码" waitTittle:@"重新获取"];
+        [sender AL_startTime:1 title:@"获取验证码" waitTittle:@"重新获取"];
         
         [[HttpClient sharedInstance]getCodeWithPhone:_phoneTextFiled.text success:^(HttpRequest *request, HttpResponse *response) {
             [MBProgressHUD showSuccess:@"验证码发送成功！" toView:ALKeyWindow];;

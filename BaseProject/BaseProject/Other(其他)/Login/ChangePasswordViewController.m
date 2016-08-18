@@ -9,20 +9,53 @@
 #import "ChangePasswordViewController.h"
 
 @interface ChangePasswordViewController ()
-@property (nonatomic,weak)IBOutlet UITextField *oldPasswordTextFiled;
-@property (nonatomic,weak)IBOutlet UITextField *nePasswordTextFiled;
-@property (nonatomic,weak)IBOutlet UITextField *sePasswordTextFiled;
+@property (nonatomic,strong) UITextField *oldPasswordTextFiled;
+@property (nonatomic,strong) UITextField *nePasswordTextFiled;
+@property (nonatomic,strong) UITextField *sePasswordTextFiled;
+@property (nonatomic,strong) UIButton *sureButton;
 @end
 
 @implementation ChangePasswordViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [self setTitle:@"修改密码"];
+    
+    //初始化子控件
+    [self initWithSubviews];
+}
+
+- (void)initWithSubviews {
+    _oldPasswordTextFiled = [[UITextField alloc]init];
+    [_oldPasswordTextFiled setPlaceholder:@"请输入旧密码"];
+    [self.view addSubview:_oldPasswordTextFiled];
+    
+    _nePasswordTextFiled = [[UITextField alloc]init];
+    [_nePasswordTextFiled setPlaceholder:@"请输入新密码"];
+    [self.view addSubview:_nePasswordTextFiled];
+    
+    _sePasswordTextFiled = [[UITextField alloc]init];
+    [_sePasswordTextFiled setPlaceholder:@"请再次输入新密码"];
+    [self.view addSubview:_sePasswordTextFiled];
+    
+    _sureButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_sureButton setTitle:@"确 定" forState:UIControlStateNormal];
+    [_sureButton setTitle:@"确 定" forState:UIControlStateHighlighted];
+    
+    [_sureButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_sureButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    
+    [_sureButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+    [_sureButton setImage:[UIImage imageNamed:@""] forState:UIControlStateHighlighted];
+    
+    [_sureButton addTarget:self action:@selector(SureAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:_sureButton];
 }
 
 //确认
-- (IBAction)SureAction:(UIButton *)sender {
+- (void)SureAction:(UIButton *)sender {
     
     if([_oldPasswordTextFiled.text AL_checkIsStringEmpty]) {
         [MBProgressHUD showMessag:@"旧密码不能为空！" toView:ALKeyWindow];
@@ -57,7 +90,4 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
 @end

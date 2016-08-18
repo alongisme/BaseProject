@@ -9,6 +9,5 @@
 #ifndef ALCustomKit_h
 #define ALCustomKit_h
 
-#import "ALCustomBarButtonItem.h"
 
 #endif /* ALCustomKit_h */

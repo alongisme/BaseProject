@@ -16,7 +16,7 @@
  *  @param width  宽度
  *  @param color  颜色
  */
-- (void)addBorderRadiusWithRadius:(CGFloat)radius width:(CGFloat)width color:(UIColor *)color {
+- (void)AL_addBorderRadiusWithRadius:(CGFloat)radius width:(CGFloat)width color:(UIColor *)color {
     [self.layer setMasksToBounds:YES];
     [self.layer setCornerRadius:radius];
     [self.layer setBorderWidth:width];

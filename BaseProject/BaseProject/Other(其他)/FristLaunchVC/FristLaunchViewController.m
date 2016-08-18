@@ -40,7 +40,7 @@
         
         if(i == [_loadImageArray count] - 1) {
             UIButton *pushButton = [UIButton buttonWithType:UIButtonTypeCustom];
-            [pushButton setFrame:CGRectMake(0, 0, 200, 40)];
+            [pushButton setFrame:CGRectMake(i * [UIScreen AL_width], 0, 200, 40)];
             [pushButton setBackgroundColor:[UIColor clearColor]];
             [scrollView addSubview:pushButton];
             
@@ -55,6 +55,10 @@
     [scrollView setContentSize:CGSizeMake([_loadImageArray count] * [UIScreen AL_width], 0)];
     
     [self.view addSubview:scrollView];
+}
+
+- (void)dealloc {
+    NSLog(@"asdads");
 }
 
 - (void)didReceiveMemoryWarning {

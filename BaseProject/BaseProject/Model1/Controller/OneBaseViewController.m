@@ -14,22 +14,25 @@
 
 @implementation OneBaseViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    [self.navigationController pushViewController:[[NSClassFromString(@"TwoBaseViewController") alloc]init] animated:YES];
         
-    [self AL_ViewControllerUniversalPushWithClassString:@"TwoBaseViewController" parameters:@{@"df":@"asd"} animated:YES];
+    [self AL_ViewControllerUniversalPushWithClassString:@"TwoBaseViewController" parameters:@{@"df":self} animated:YES];
     
+//    TestViewController *two = [[TestViewController alloc]init];
+//       
+//    [self.navigationController pushViewController:two animated:YES];
 }
 
 @end

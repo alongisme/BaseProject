@@ -9,6 +9,4 @@
 #ifndef CommonConst_h
 #define CommonConst_h
 
-static NSString *CustomTableViewCellIdentifierId = @"CustomTableViewCellIdentifierId";
-
 #endif /* CommonConst_h */

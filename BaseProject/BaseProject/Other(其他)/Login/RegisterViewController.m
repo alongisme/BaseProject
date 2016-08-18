@@ -9,22 +9,78 @@
 #import "RegisterViewController.h"
 
 @interface RegisterViewController ()
-@property (nonatomic,weak)IBOutlet UITextField *phoneTextFiled;
-@property (nonatomic,weak)IBOutlet UITextField *codeTextFiled;
-@property (nonatomic,weak)IBOutlet UITextField *nikeNameTextFiled;
-@property (nonatomic,weak)IBOutlet UITextField *passwordTextFiled;
-@property (nonatomic,weak)IBOutlet UITextField *sePasswordTextFiled;
+@property (nonatomic,strong) UITextField *phoneTextFiled;
+@property (nonatomic,strong) UITextField *codeTextFiled;
+@property (nonatomic,strong) UIButton *codeButton;
+@property (nonatomic,strong) UITextField *nikeNameTextFiled;
+@property (nonatomic,strong) UITextField *passwordTextFiled;
+@property (nonatomic,strong) UITextField *sePasswordTextFiled;
+@property (nonatomic,strong) UIButton *registButton;
 @end
 
 @implementation RegisterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [self setTitle:@"注册用户"];
+    
+    //初始化子控件
+    [self initWithSubviews];
+}
+
+- (void)initWithSubviews {
+    _phoneTextFiled = [[UITextField alloc]init];
+    [_phoneTextFiled setPlaceholder:@"请输入手机号码"];
+    [self.view addSubview:_phoneTextFiled];
+    
+    _codeTextFiled = [[UITextField alloc]init];
+    [_codeTextFiled setPlaceholder:@"请输入验证码"];
+    [self.view addSubview:_codeTextFiled];
+    
+    _codeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_codeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
+    [_codeButton setTitle:@"获取验证码" forState:UIControlStateHighlighted];
+    
+    [_codeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_codeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    
+    [_codeButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+    [_codeButton setImage:[UIImage imageNamed:@""] forState:UIControlStateHighlighted];
+    
+    [_codeButton addTarget:self action:@selector(GetCodeAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:_codeButton];
+    
+    _nikeNameTextFiled = [[UITextField alloc]init];
+    [_nikeNameTextFiled setPlaceholder:@"请输入昵称"];
+    [self.view addSubview:_nikeNameTextFiled];
+    
+    _passwordTextFiled = [[UITextField alloc]init];
+    [_passwordTextFiled setPlaceholder:@"请输入密码"];
+    [self.view addSubview:_passwordTextFiled];
+    
+    _sePasswordTextFiled = [[UITextField alloc]init];
+    [_sePasswordTextFiled setPlaceholder:@"请再次输入密码"];
+    [self.view addSubview:_sePasswordTextFiled];
+    
+    _registButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_registButton setTitle:@"注 册" forState:UIControlStateNormal];
+    [_registButton setTitle:@"注 册" forState:UIControlStateHighlighted];
+
+    [_registButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_registButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    
+    [_registButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+    [_registButton setImage:[UIImage imageNamed:@""] forState:UIControlStateHighlighted];
+    
+    [_registButton addTarget:self action:@selector(RegisterAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:_registButton];
 }
 
 //获取验证码
-- (IBAction)GetCodeAction:(UIButton *)sender {
+- (void)GetCodeAction:(UIButton *)sender {
     if([_phoneTextFiled.text AL_checkIsStringEmpty]) {
         [MBProgressHUD showMessag:@"手机码号不能为空！" toView:ALKeyWindow];
         return;
@@ -35,11 +91,9 @@
         return;
     }
     
-    __block UIButton *codeButton = sender;
-    
     [sender AL_handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakSender) {
         
-        [codeButton AL_startTime:1 title:@"获取验证码" waitTittle:@"重新获取"];
+        [sender AL_startTime:1 title:@"获取验证码" waitTittle:@"重新获取"];
         
         [[HttpClient sharedInstance]getCodeWithPhone:_phoneTextFiled.text success:^(HttpRequest *request, HttpResponse *response) {
             [MBProgressHUD showSuccess:@"验证码发送成功！" toView:ALKeyWindow];;
@@ -52,7 +106,7 @@
 }
 
 //注册
-- (IBAction)RegisterAction:(UIButton *)sender {
+- (void)RegisterAction:(UIButton *)sender {
     if([_phoneTextFiled.text AL_checkIsStringEmpty]) {
         [MBProgressHUD showMessag:@"手机码号不能为空！" toView:ALKeyWindow];
         return;

@@ -37,7 +37,7 @@
                 //校验是否有这个属性存在
                 if([self checkClassIsExisPropertyWithInstance:getClass verifyPropertyName:value]) {
                     //有则赋值
-                    [controllerClass setValue:value forKey:[parameters objectForKey:value]];
+                    [controllerClass setValue:[parameters objectForKey:value] forKey:value];
                 }
                 
             }

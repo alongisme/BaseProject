@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TwoBaseViewController : UIViewController
+@class OneBaseViewController;
 
+@interface TwoBaseViewController : UIViewController
+@property (nonatomic,strong) OneBaseViewController *df;
 @end

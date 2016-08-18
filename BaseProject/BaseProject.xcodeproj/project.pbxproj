@@ -24,11 +24,9 @@
 		842791261D5087BA0012F194 /* HttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 842791171D5087BA0012F194 /* HttpResponse.m */; };
 		842791271D5087BA0012F194 /* UploadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842791191D5087BA0012F194 /* UploadModel.m */; };
 		8427912B1D5092B00012F194 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842791291D5092B00012F194 /* LoginViewController.m */; };
-		8427912C1D5092B00012F194 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8427912A1D5092B00012F194 /* LoginViewController.xib */; };
 		842791361D50983A0012F194 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 842791331D50983A0012F194 /* MBProgressHUD+Add.m */; };
 		842791371D50983A0012F194 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 842791351D50983A0012F194 /* MBProgressHUD.m */; };
 		842A48661D519A35008CBEB3 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842A48641D519A35008CBEB3 /* RegisterViewController.m */; };
-		842A48671D519A35008CBEB3 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842A48651D519A35008CBEB3 /* RegisterViewController.xib */; };
 		842A48E51D51A19F008CBEB3 /* NSDate+ALExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 842A48B81D51A19F008CBEB3 /* NSDate+ALExtension.m */; };
 		842A48E61D51A19F008CBEB3 /* NSObject+ALKVOBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 842A48BA1D51A19F008CBEB3 /* NSObject+ALKVOBlocks.m */; };
 		842A48E71D51A19F008CBEB3 /* NSString+ALSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 842A48BC1D51A19F008CBEB3 /* NSString+ALSize.m */; };
@@ -53,9 +51,7 @@
 		842A48FA1D51A19F008CBEB3 /* UIView+ALCustomBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 842A48E21D51A19F008CBEB3 /* UIView+ALCustomBorder.m */; };
 		842A48FB1D51A19F008CBEB3 /* UIView+ALFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 842A48E41D51A19F008CBEB3 /* UIView+ALFrame.m */; };
 		842A48FF1D51A5C5008CBEB3 /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842A48FD1D51A5C5008CBEB3 /* ForgetPasswordViewController.m */; };
-		842A49001D51A5C5008CBEB3 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842A48FE1D51A5C5008CBEB3 /* ForgetPasswordViewController.xib */; };
 		842A49041D51A84C008CBEB3 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842A49021D51A84C008CBEB3 /* ChangePasswordViewController.m */; };
-		842A49051D51A84C008CBEB3 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842A49031D51A84C008CBEB3 /* ChangePasswordViewController.xib */; };
 		842A49081D51A98C008CBEB3 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842A49071D51A98C008CBEB3 /* MainNavigationController.m */; };
 		842A49271D51C970008CBEB3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 842A49111D51C96F008CBEB3 /* Info.plist */; };
 		842A49281D51C970008CBEB3 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842A49141D51C96F008CBEB3 /* JSONModel.m */; };
@@ -86,7 +82,6 @@
 		847F8EE61D530EF90039291C /* FourBseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847F8EE41D530EF90039291C /* FourBseViewController.xib */; };
 		847F8EEA1D530F0A0039291C /* FiveBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847F8EE81D530F0A0039291C /* FiveBaseViewController.m */; };
 		847F8EEB1D530F0A0039291C /* FiveBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847F8EE91D530F0A0039291C /* FiveBaseViewController.xib */; };
-		847F8EF51D532A7D0039291C /* ALCustomBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 847F8EF41D532A7D0039291C /* ALCustomBarButtonItem.m */; };
 		847F8EFF1D5350660039291C /* UIViewController+ALAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 847F8EFE1D5350660039291C /* UIViewController+ALAction.m */; };
 		849BE7921D545D1000FF229B /* UIViewController+ALUniversalPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 849BE7911D545D1000FF229B /* UIViewController+ALUniversalPush.m */; };
 		84D3B7271D5C2535005A5A42 /* ALRuntimeTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3B7261D5C2535005A5A42 /* ALRuntimeTools.m */; };
@@ -148,7 +143,6 @@
 		842791191D5087BA0012F194 /* UploadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadModel.m; sourceTree = "<group>"; };
 		842791281D5092B00012F194 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		842791291D5092B00012F194 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		8427912A1D5092B00012F194 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		8427912E1D5093F80012F194 /* CommonMacros.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacros.pch; sourceTree = "<group>"; };
 		8427912F1D5096120012F194 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		842791321D50983A0012F194 /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
@@ -158,7 +152,6 @@
 		842A485E1D51969B008CBEB3 /* CommonMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
 		842A48631D519A35008CBEB3 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		842A48641D519A35008CBEB3 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		842A48651D519A35008CBEB3 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		842A48B61D51A19F008CBEB3 /* CommonCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonCategory.h; sourceTree = "<group>"; };
 		842A48B71D51A19F008CBEB3 /* NSDate+ALExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ALExtension.h"; sourceTree = "<group>"; };
 		842A48B81D51A19F008CBEB3 /* NSDate+ALExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ALExtension.m"; sourceTree = "<group>"; };
@@ -208,10 +201,8 @@
 		842A48E41D51A19F008CBEB3 /* UIView+ALFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ALFrame.m"; sourceTree = "<group>"; };
 		842A48FC1D51A5C5008CBEB3 /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
 		842A48FD1D51A5C5008CBEB3 /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
-		842A48FE1D51A5C5008CBEB3 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
 		842A49011D51A84C008CBEB3 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
 		842A49021D51A84C008CBEB3 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
-		842A49031D51A84C008CBEB3 /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
 		842A49061D51A98C008CBEB3 /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
 		842A49071D51A98C008CBEB3 /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 		842A49111D51C96F008CBEB3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -270,8 +261,6 @@
 		847F8EE71D530F0A0039291C /* FiveBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveBaseViewController.h; sourceTree = "<group>"; };
 		847F8EE81D530F0A0039291C /* FiveBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveBaseViewController.m; sourceTree = "<group>"; };
 		847F8EE91D530F0A0039291C /* FiveBaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiveBaseViewController.xib; sourceTree = "<group>"; };
-		847F8EF31D532A7D0039291C /* ALCustomBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCustomBarButtonItem.h; sourceTree = "<group>"; };
-		847F8EF41D532A7D0039291C /* ALCustomBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCustomBarButtonItem.m; sourceTree = "<group>"; };
 		847F8EF61D532ABA0039291C /* ALCustomKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALCustomKit.h; sourceTree = "<group>"; };
 		847F8EFD1D5350660039291C /* UIViewController+ALAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ALAction.h"; sourceTree = "<group>"; };
 		847F8EFE1D5350660039291C /* UIViewController+ALAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ALAction.m"; sourceTree = "<group>"; };
@@ -394,7 +383,6 @@
 			children = (
 				842791281D5092B00012F194 /* LoginViewController.h */,
 				842791291D5092B00012F194 /* LoginViewController.m */,
-				8427912A1D5092B00012F194 /* LoginViewController.xib */,
 			);
 			name = "loginVC(登录界面)";
 			sourceTree = "<group>";
@@ -404,7 +392,6 @@
 			children = (
 				842A49011D51A84C008CBEB3 /* ChangePasswordViewController.h */,
 				842A49021D51A84C008CBEB3 /* ChangePasswordViewController.m */,
-				842A49031D51A84C008CBEB3 /* ChangePasswordViewController.xib */,
 			);
 			name = "changeVC(修改密码界面)";
 			sourceTree = "<group>";
@@ -414,7 +401,6 @@
 			children = (
 				842A48FC1D51A5C5008CBEB3 /* ForgetPasswordViewController.h */,
 				842A48FD1D51A5C5008CBEB3 /* ForgetPasswordViewController.m */,
-				842A48FE1D51A5C5008CBEB3 /* ForgetPasswordViewController.xib */,
 			);
 			name = "forgetVC(忘记密码界面)";
 			sourceTree = "<group>";
@@ -424,7 +410,6 @@
 			children = (
 				842A48631D519A35008CBEB3 /* RegisterViewController.h */,
 				842A48641D519A35008CBEB3 /* RegisterViewController.m */,
-				842A48651D519A35008CBEB3 /* RegisterViewController.xib */,
 			);
 			name = "registerVC(注册界面)";
 			sourceTree = "<group>";
@@ -585,8 +570,6 @@
 			isa = PBXGroup;
 			children = (
 				847F8EF61D532ABA0039291C /* ALCustomKit.h */,
-				847F8EF31D532A7D0039291C /* ALCustomBarButtonItem.h */,
-				847F8EF41D532A7D0039291C /* ALCustomBarButtonItem.m */,
 			);
 			path = "CustomKit(自定义控件)";
 			sourceTree = "<group>";
@@ -1071,16 +1054,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				842A49001D51A5C5008CBEB3 /* ForgetPasswordViewController.xib in Resources */,
 				842790E11D5086820012F194 /* Assets.xcassets in Resources */,
 				842A49271D51C970008CBEB3 /* Info.plist in Resources */,
 				847F8EEB1D530F0A0039291C /* FiveBaseViewController.xib in Resources */,
-				842A49051D51A84C008CBEB3 /* ChangePasswordViewController.xib in Resources */,
 				847F8EE61D530EF90039291C /* FourBseViewController.xib in Resources */,
-				8427912C1D5092B00012F194 /* LoginViewController.xib in Resources */,
 				847F8EDC1D530ED90039291C /* OneBaseViewController.xib in Resources */,
 				847F8EE11D530EEB0039291C /* TwoBaseViewController.xib in Resources */,
-				842A48671D519A35008CBEB3 /* RegisterViewController.xib in Resources */,
 				84D3B7291D5C4837005A5A42 /* MainViewControllerList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1167,7 +1146,6 @@
 				842A48661D519A35008CBEB3 /* RegisterViewController.m in Sources */,
 				842A49461D51E2C4008CBEB3 /* CYLPlusButtonSubclass.m in Sources */,
 				847F8EE51D530EF90039291C /* FourBseViewController.m in Sources */,
-				847F8EF51D532A7D0039291C /* ALCustomBarButtonItem.m in Sources */,
 				842A48F41D51A19F008CBEB3 /* UINavigationController+ALTransitions.m in Sources */,
 				842A492C1D51C970008CBEB3 /* JSONHTTPClient.m in Sources */,
 				842A48ED1D51A19F008CBEB3 /* UIImage+ALImageCircle.m in Sources */,
