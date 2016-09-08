@@ -21,7 +21,7 @@
 
 #pragma mark init 初始化
 -(instancetype)init {
-    if(self == [super init]) {
+    if(self = [super init]) {
         //请求格式 //统一只使用二进制
         self.requestSerializer = [AFHTTPRequestSerializer serializer];
        }
