@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		842790E11D5086820012F194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842790E01D5086820012F194 /* Assets.xcassets */; };
 		842790E41D5086DC0012F194 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 842790E31D5086DC0012F194 /* main.m */; };
 		842790F31D5087AB0012F194 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 842790E71D5087AB0012F194 /* AFHTTPSessionManager.m */; };
 		842790F41D5087AB0012F194 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 842790EA1D5087AB0012F194 /* AFNetworkReachabilityManager.m */; };
@@ -89,6 +88,7 @@
 		84E9B3561D507500004264BF /* BaseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E9B3551D507500004264BF /* BaseProjectTests.m */; };
 		84E9B3611D507501004264BF /* BaseProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E9B3601D507501004264BF /* BaseProjectUITests.m */; };
 		84E9B3951D507FD6004264BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E9B3941D507FD6004264BF /* AppDelegate.m */; };
+		BF296F2C1E0A84F6001A0441 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF296F2B1E0A84F6001A0441 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,7 +109,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		842790E01D5086820012F194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		842790E31D5086DC0012F194 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		842790E61D5087AB0012F194 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		842790E71D5087AB0012F194 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
@@ -279,6 +278,7 @@
 		84E9B3621D507501004264BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84E9B3931D507FD6004264BF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84E9B3941D507FD6004264BF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BF296F2B1E0A84F6001A0441 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "BaseProject/Resource(资源)/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -868,7 +868,6 @@
 		84E9B38A1D5077DB004264BF /* Resource(资源) */ = {
 			isa = PBXGroup;
 			children = (
-				842790E01D5086820012F194 /* Assets.xcassets */,
 				84E9B38C1D5077F8004264BF /* Image */,
 				84E9B38D1D5077F8004264BF /* Plist */,
 			);
@@ -888,6 +887,7 @@
 		84E9B38C1D5077F8004264BF /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				BF296F2B1E0A84F6001A0441 /* Assets.xcassets */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -1015,7 +1015,7 @@
 				TargetAttributes = {
 					84E9B3371D507500004264BF = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 8BF8687AT7;
+						DevelopmentTeam = KX9X69P79J;
 						DevelopmentTeamName = "3TI Solutions, Inc.";
 						ProvisioningStyle = Automatic;
 					};
@@ -1054,11 +1054,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				842790E11D5086820012F194 /* Assets.xcassets in Resources */,
 				842A49271D51C970008CBEB3 /* Info.plist in Resources */,
 				847F8EEB1D530F0A0039291C /* FiveBaseViewController.xib in Resources */,
 				847F8EE61D530EF90039291C /* FourBseViewController.xib in Resources */,
 				847F8EDC1D530ED90039291C /* OneBaseViewController.xib in Resources */,
+				BF296F2C1E0A84F6001A0441 /* Assets.xcassets in Resources */,
 				847F8EE11D530EEB0039291C /* TwoBaseViewController.xib in Resources */,
 				84D3B7291D5C4837005A5A42 /* MainViewControllerList.plist in Resources */,
 			);
@@ -1279,12 +1279,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KX9X69P79J;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/Expand(拓展)/Macros(宏)/CommonMacros.pch";
 				INFOPLIST_FILE = "$(PRODUCT_NAME)/Resource(资源)/Plist/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.along.us.BaseProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.along.us.BaseProject2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1297,12 +1298,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KX9X69P79J;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/Expand(拓展)/Macros(宏)/CommonMacros.pch";
 				INFOPLIST_FILE = "$(PRODUCT_NAME)/Resource(资源)/Plist/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.along.us.BaseProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.along.us.BaseProject2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

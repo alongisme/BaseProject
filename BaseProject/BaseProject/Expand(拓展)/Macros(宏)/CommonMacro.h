@@ -11,9 +11,9 @@
 
 //DeBug
 #ifdef DEBUG
-#define ALLog(...) NSLog(@"%s %d Line \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+#define NSLog(...) NSLog(@"%s %d Line \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
 #else
-#define ALLog(...)
+#define NSLog(...)
 #endif
 
 //AppDelegate
