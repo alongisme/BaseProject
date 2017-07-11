@@ -31,6 +31,10 @@
     NSLog(@"asdads");
 }
 
+- (void)test1 {
+    NSLog(@"asdads");
+}
+
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    [self.navigationController pushViewController:[[NSClassFromString(@"TwoBaseViewController") alloc]init] animated:YES];
         
